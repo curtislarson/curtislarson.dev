@@ -22,7 +22,6 @@ export default defineConfig({
       ],
     }),
   ],
-  base: "/curtislarson.dev/",
   build: {
     outDir: "dist",
     sourcemap: true,
