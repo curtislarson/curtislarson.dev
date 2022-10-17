@@ -13,9 +13,9 @@ export default defineConfig({
       presets: [
         presetUno(),
         presetWebFonts({
-          provider: "google",
+          provider: "bunny",
           fonts: {
-            sans: "Roboto",
+            sans: "Fira Sans",
             mono: ["Fira Code", "Fira Mono:400,700"],
           },
         }),
