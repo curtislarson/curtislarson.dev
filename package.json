@@ -2,17 +2,13 @@
   "name": "curtislarson.dev",
   "type": "module",
   "devDependencies": {
-    "@preact/preset-vite": "2.4.0",
-    "@testing-library/preact": "^3.2.2",
-    "happy-dom": "^6.0.4",
-    "jsdom": "^20.0.0",
+    "@preact/preset-vite": "^2.5.0",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.20",
     "rimraf": "^3.0.2",
-    "typescript": "4.8.4",
-    "vite": "3.1.8",
-    "vite-tsconfig-paths": "^3.5.1",
-    "vitest": "0.24.3",
-    "unocss": "^0.45.29",
-    "@unocss/preset-web-fonts": "^0.45.29"
+    "typescript": "4.9.4",
+    "vite": "^4.0.2",
+    "vite-tsconfig-paths": "^4.0.3"
   },
   "scripts": {
     "dev": "vite",
@@ -20,10 +16,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "daisyui": "^2.31.0",
-    "preact": "10.11.2",
+    "daisyui": "^2.45.0",
+    "preact": "10.11.3",
     "react": "npm:@preact/compat@^17.1.2",
     "react-dom": "npm:@preact/compat@^17.1.2",
-    "tailwindcss": "3.1.8"
+    "tailwindcss": "3.2.4"
   }
 }
