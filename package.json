@@ -1,6 +1,7 @@
 {
   "name": "curtislarson.dev",
   "type": "module",
+  "homepage": "https://curtislarson.github.io",
   "scripts": {
     "dev": "vite",
     "build": "rimraf dist && tsc && NODE_ENV=production vite build",

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function () {
   return (
     <div class="hero min-h-screen">
@@ -22,9 +24,9 @@ export default function () {
           </p>
         </div>
         <div class="flex flex-row">
-          <a href="/projects" alt="Contact" class="btn btn-secondary">
+          <Link to="/projects" class="btn btn-secondary">
             Recent Projects
-          </a>
+          </Link>
         </div>
       </div>
     </div>
