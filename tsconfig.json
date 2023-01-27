@@ -1,5 +1,5 @@
 {
-  "exclude": ["tasks", "node_modules"],
+  "exclude": ["tasks", "node_modules", "./tailwind.config.cjs"],
   "compilerOptions": {
     "allowJs": true,
     "skipLibCheck": true,

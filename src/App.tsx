@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
-import { lazy, Suspense } from "preact/compat";
+import { JSX, lazy, Suspense } from "preact/compat";
 import Layout from "./Layout";
 
 type ImportComponent = { default: (...args: any[]) => JSX.Element };
