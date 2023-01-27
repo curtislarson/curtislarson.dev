@@ -1,10 +1,9 @@
 export default function () {
   return (
-    <div class="hero min-h-screen bg-base-200">
+    <div class="hero min-h-screen">
       <div class="hero-content flex flex-col text-center">
         <h1 class="text-7xl font-bold">Curtis Larson</h1>
         <h2 class="text-2xl mt-2 font-light">Freelance Software Developer</h2>
-        <hr />
         <div class="flex flex-row">
           <p class="text-primary py-2 px-2">
             <a href="mailto:hi@curtislarson.dev" alt="Contact" class="btn btn-primary">
@@ -21,6 +20,11 @@ export default function () {
               Github
             </a>
           </p>
+        </div>
+        <div class="flex flex-row">
+          <a href="/projects" alt="Contact" class="btn btn-secondary">
+            Recent Projects
+          </a>
         </div>
       </div>
     </div>
