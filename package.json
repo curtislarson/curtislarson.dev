@@ -4,6 +4,7 @@
   "homepage": "https://curtislarson.github.io",
   "scripts": {
     "dev": "vite",
+    "start": "vite",
     "build": "rimraf dist && tsc && NODE_ENV=production vite build",
     "preview": "vite preview"
   },

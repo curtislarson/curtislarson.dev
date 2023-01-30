@@ -22,4 +22,11 @@ export const PROJECT_DATA: ProjectProps[] = [
     content: "Embed auto updating code samples from any github repo in your markdown files.",
     tags: ["deno", "typescript", "github", "ssr"],
   },
+  {
+    href: "https://github.com/curtislarson/typebox-form",
+    title: "TypeBox Form",
+    preview: "Dynamically generate forms with input validation and type safety",
+    content: "Dynamically generate forms with input validation and type safety",
+    tags: ["typescript", "preact", "schema", "typebox"],
+  },
 ];
