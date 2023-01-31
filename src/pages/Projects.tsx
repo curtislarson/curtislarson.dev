@@ -15,8 +15,8 @@ export default function Projects() {
           ))}
         </div>
       </div>
-      <div class="flex flex-row self-center">
-        <div class="py-5 px-2 text-center">
+      <div class="flex flex-row self-center shadow-xl mt-5 p-2 bg-base-300 rounded-lg">
+        <div class="py-5 px-5 text-center">
           <h3 class="text-2xl">
             <a href="https://github.com/curtislarson" alt="Github" class="text-info">
               More Projects
