@@ -29,23 +29,6 @@ export default function () {
             </a>
           </p>
         </div>
-        <div class="flex flex-row">
-          <div class="flex-1 py-2 px-2">
-            <Link to="/projects" class="btn btn-secondary">
-              Projects
-            </Link>
-          </div>
-          {/* <div class="flex-1 py-2 px-2">
-            <a
-              href={import.meta.env.VITE_BLOG_URL}
-              rel="noopener noreferrer nofollow"
-              target="_blank"
-              class="btn btn-secondary"
-            >
-              Blog
-            </a>
-          </div> */}
-        </div>
       </div>
     </div>
   );

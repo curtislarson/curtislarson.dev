@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@preact/preset-vite': ^2.5.0
   autoprefixer: ^10.4.13
-  daisyui: ^2.47.0
+  daisyui: ^2.50.0
   postcss: ^8.4.21
   preact: 10.11.3
   react: npm:@preact/compat@^17.1.2
@@ -16,7 +16,7 @@ specifiers:
   vite-tsconfig-paths: ^4.0.3
 
 dependencies:
-  daisyui: 2.49.0_gbtt6ss3tbiz4yjtvdr6fbrj44
+  daisyui: 2.50.0_gbtt6ss3tbiz4yjtvdr6fbrj44
   preact: 10.11.3
   react: /@preact/compat/17.1.2_preact@10.11.3
   react-dom: /@preact/compat/17.1.2_preact@10.11.3
@@ -796,8 +796,8 @@ packages:
     hasBin: true
     dev: false
 
-  /daisyui/2.49.0_gbtt6ss3tbiz4yjtvdr6fbrj44:
-    resolution: {integrity: sha512-+hEFMupi/7rqkAH4d3iBWj1TXRq73V3PrkJ3HiDqFuQgMoE1/UQOgMoeqaHa3r4IRo4fjMNauwHBA17qT0YSIA==, tarball: https://registry.npmjs.org/daisyui/-/daisyui-2.49.0.tgz}
+  /daisyui/2.50.0_gbtt6ss3tbiz4yjtvdr6fbrj44:
+    resolution: {integrity: sha512-KiqRvqMXi9rgoH84M8D69gXPg6x+cbdiaHqm8pFHOsXXN1rTl/+OcCKkSnkEwTtIge9VJVDGU6l4B8/n+Juc5g==, tarball: https://registry.npmjs.org/daisyui/-/daisyui-2.50.0.tgz}
     peerDependencies:
       autoprefixer: ^10.0.2
       postcss: ^8.1.6
