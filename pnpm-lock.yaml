@@ -11,7 +11,7 @@ specifiers:
   react-router-dom: 6.7.0
   rimraf: ^3.0.2
   tailwindcss: 3.2.4
-  typescript: 4.9.4
+  typescript: beta
   vite: ^4.0.4
   vite-tsconfig-paths: ^4.0.3
 
@@ -28,9 +28,9 @@ devDependencies:
   autoprefixer: 10.4.13_postcss@8.4.21
   postcss: 8.4.21
   rimraf: 3.0.2
-  typescript: 4.9.4
+  typescript: 5.0.0-beta
   vite: 4.0.4
-  vite-tsconfig-paths: 4.0.3_gl4qsmwzp7wy5uclz4tx77gbli
+  vite-tsconfig-paths: 4.0.3_ftgjmy4wq6kwzi2es6ia2nc6w4
 
 packages:
 
@@ -1353,7 +1353,7 @@ packages:
       is-number: 7.0.0
     dev: false
 
-  /tsconfck/2.0.1_typescript@4.9.4:
+  /tsconfck/2.0.1_typescript@5.0.0-beta:
     resolution: {integrity: sha512-/ipap2eecmVBmBlsQLBRbUmUNFwNJV/z2E+X0FPtHNjPwroMZQ7m39RMaCywlCulBheYXgMdUlWDd9rzxwMA0Q==, tarball: https://registry.npmjs.org/tsconfck/-/tsconfck-2.0.1.tgz}
     engines: {node: ^14.13.1 || ^16 || >=18, pnpm: ^7.0.1}
     hasBin: true
@@ -1363,11 +1363,11 @@ packages:
       typescript:
         optional: true
     dependencies:
-      typescript: 4.9.4
+      typescript: 5.0.0-beta
     dev: true
 
-  /typescript/4.9.4:
-    resolution: {integrity: sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==, tarball: https://registry.npmjs.org/typescript/-/typescript-4.9.4.tgz}
+  /typescript/5.0.0-beta:
+    resolution: {integrity: sha512-+SSabbSXG5mtF+QGdV9uXXt9Saq1cSyI6hSG7znhaLoquleJpnmfkwSxFngK9c2fWWi1W/263TuzXQOsIcdjjA==, tarball: https://registry.npmjs.org/typescript/-/typescript-5.0.0-beta.tgz}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
@@ -1386,14 +1386,14 @@ packages:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==, tarball: https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz}
     dev: false
 
-  /vite-tsconfig-paths/4.0.3_gl4qsmwzp7wy5uclz4tx77gbli:
+  /vite-tsconfig-paths/4.0.3_ftgjmy4wq6kwzi2es6ia2nc6w4:
     resolution: {integrity: sha512-gRO2Q/tOkV+9kMht5tz90+IaEKvW2zCnvwJV3tp2ruPNZOTM5rF+yXorJT4ggmAMYEaJ3nyXjx5P5jY5FwiZ+A==, tarball: https://registry.npmjs.org/vite-tsconfig-paths/-/vite-tsconfig-paths-4.0.3.tgz}
     peerDependencies:
       vite: '>2.0.0-0'
     dependencies:
       debug: 4.3.4
       globrex: 0.1.2
-      tsconfck: 2.0.1_typescript@4.9.4
+      tsconfck: 2.0.1_typescript@5.0.0-beta
       vite: 4.0.4
     transitivePeerDependencies:
       - supports-color
