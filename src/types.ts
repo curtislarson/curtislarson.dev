@@ -3,6 +3,5 @@ export interface ProjectData {
   readonly slug?: string;
   readonly href?: string;
   readonly tags: string[];
-  readonly content: string;
   readonly preview: string;
 }

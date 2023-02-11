@@ -26,7 +26,6 @@ export default function Project(props: ProjectProps) {
             </span>
           </h1>
         </div>
-        <div class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">{props.content}</div>
       </div>
     </div>
   );
