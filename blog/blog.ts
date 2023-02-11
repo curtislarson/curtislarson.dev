@@ -1,5 +1,12 @@
-#!/usr/bin/env -S deno run -A --unstable --no-check --no-config
+import { Blog } from "https://raw.githubusercontent.com/curtislarson/mdx-static/master/mod.ts";
 
-import { Blog } from "../../mdx-blog/mod.ts";
+await new Blog({
+  index: {
+    title: "blog",
+    description: "Thoughts and Ideas",
+  },
+  author: "Curtis Larson",
+  blogDir: new URL("./posts", import.meta.url).pathname,
 
-await new Blog({ blogDir: new URL("./posts", import.meta.url).pathname, css: {} }).serve();
+  css: { theme: "dracula" },
+}).serve();

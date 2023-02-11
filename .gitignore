@@ -24,5 +24,4 @@ dist-ssr
 *.sw?
 
 public/stars.json
-
-posts/draft
+blog/drafts
