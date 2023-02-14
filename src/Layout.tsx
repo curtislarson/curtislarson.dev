@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
-import Navbar, { NavbarItem } from "../packages/components/src/Navbar";
+import Navbar, { NavbarItem } from "./components/Navbar";
 
 const NAVBAR_ITEMS: NavbarItem[] = [
-  { text: "Projects", to: "/projects" },
+  { text: "Projects", to: "/projects", active: window.location.href.endsWith("/projects") },
   // { text: "Blog", href: "https://blog.curtislarson.dev" },
   { text: "Beers", href: "https://beers.curtislarson.dev" },
 ];
