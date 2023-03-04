@@ -3,7 +3,7 @@ export default function Hero() {
     <div class="hero min-h-[70vh]">
       <div class="items-center justify-center max-w-full gap-4 p-4 flex flex-col text-center">
         <h1 class="text-7xl font-bold">Curtis Larson</h1>
-        <h2 class="text-2xl mt-2 font-light">Freelance Software Developer</h2>
+        <h2 class="text-2xl mt-2 font-light">Full Stack Software Developer</h2>
         <div class="flex flex-row">
           <p class="text-primary py-2 px-2">
             <a href="mailto:hi@curtislarson.dev" alt="Contact" class="btn btn-primary">
