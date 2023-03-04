@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export type NavbarItem = {
-  active?: boolean;
   text: string;
 } & ({ href: string } | { to: string });
 
@@ -14,6 +13,8 @@ export interface NavbarProps {
 }
 
 export default function Navbar(props: NavbarProps) {
+  const location = useLocation();
+
   return (
     <div class="navbar bg-base-200">
       <div class="flex-none">
@@ -25,23 +26,28 @@ export default function Navbar(props: NavbarProps) {
       <div class="flex-none">
         {props.items && (
           <ul class="menu menu-horizontal px-1">
-            {props.items.map((item, idx) => (
-              <li key={idx}>
-                <span
-                  class={`btn normal-case active:btn-outline ${item.active ? "btn-outline btn-primary" : "btn-ghost"}`}
-                >
-                  {"to" in item ? (
-                    <Link to={item.to} id={`navbar-item-${idx}`}>
-                      {item.text}
-                    </Link>
-                  ) : (
-                    <a href={item.href} id={`navbar-item-${idx}`}>
-                      {item.text}
-                    </a>
-                  )}
-                </span>
-              </li>
-            ))}
+            {props.items.map((item, idx) => {
+              const path = "to" in item ? item.to : item.href;
+              return (
+                <li key={idx}>
+                  <span
+                    class={`btn normal-case active:btn-outline ${
+                      location.pathname.endsWith(path) ? "btn-outline btn-primary" : "btn-ghost"
+                    }`}
+                  >
+                    {"to" in item ? (
+                      <Link to={item.to} id={`navbar-item-${idx}`}>
+                        {item.text}
+                      </Link>
+                    ) : (
+                      <a href={item.href} id={`navbar-item-${idx}`}>
+                        {item.text}
+                      </a>
+                    )}
+                  </span>
+                </li>
+              );
+            })}
           </ul>
         )}
       </div>

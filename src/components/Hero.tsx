@@ -1,5 +1,4 @@
-
-export default function () {
+export default function Hero() {
   return (
     <div class="hero min-h-[70vh]">
       <div class="items-center justify-center max-w-full gap-4 p-4 flex flex-col text-center">
