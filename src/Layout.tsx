@@ -3,6 +3,7 @@ import Navbar, { NavbarItem } from "./components/Navbar";
 
 const NAVBAR_ITEMS: NavbarItem[] = [
   { text: "Projects", to: "/projects" },
+  { text: "Travel", href: "https://nomadlist.com/@curtis" },
   // { text: "Blog", href: "https://blog.curtislarson.dev" },
   { text: "Beers", href: "https://beers.curtislarson.dev" },
 ];
