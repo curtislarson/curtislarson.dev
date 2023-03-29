@@ -1,4 +1,5 @@
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import NavbarItem from "./NavbarItem";
 
 export type NavbarItem = {
   text: string;
@@ -26,28 +27,9 @@ export default function Navbar(props: NavbarProps) {
       <div class="flex-none">
         {props.items && (
           <ul class="menu menu-horizontal px-1">
-            {props.items.map((item, idx) => {
-              const path = "to" in item ? item.to : item.href;
-              return (
-                <li key={idx}>
-                  <span
-                    class={`btn normal-case active:btn-outline ${
-                      location.pathname.endsWith(path) ? "btn-outline btn-primary" : "btn-ghost"
-                    }`}
-                  >
-                    {"to" in item ? (
-                      <Link to={item.to} id={`navbar-item-${idx}`}>
-                        {item.text}
-                      </Link>
-                    ) : (
-                      <a href={item.href} id={`navbar-item-${idx}`}>
-                        {item.text}
-                      </a>
-                    )}
-                  </span>
-                </li>
-              );
-            })}
+            {props.items.map((item) => (
+              <NavbarItem {...item} key={item.text} />
+            ))}
           </ul>
         )}
       </div>
