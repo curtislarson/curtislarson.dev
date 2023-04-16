@@ -8,15 +8,21 @@ export default function NavbarItem(props: NavbarItemProps) {
   const path = "to" in props ? props.to : props.href;
   const isInternaLink = "to" in props;
 
-  return (
+  const linkItem = (
     <li>
       <span
-        class={`btn normal-case active:btn-outline ${
+        class={`w-max btn normal-case active:btn-outline ${
           location.pathname.endsWith(path) ? "btn-outline btn-primary" : "btn-ghost"
         }`}
       >
-        {isInternaLink ? <Link to={path}>{props.text}</Link> : <a href={path}>{props.text}</a>}
+        {props.text}
       </span>
     </li>
   );
+
+  if (isInternaLink) {
+    return <Link to={path}>{linkItem}</Link>;
+  } else {
+    return <a href={path}>{linkItem}</a>;
+  }
 }
