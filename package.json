@@ -1,7 +1,6 @@
 {
   "name": "curtislarson.dev",
   "type": "module",
-  "homepage": "https://curtislarson.github.io",
   "scripts": {
     "dev": "vite",
     "start": "vite",

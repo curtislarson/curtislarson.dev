@@ -1,58 +1,28 @@
-name: 🚀 Build & Deploy
-
-permissions:
-  id-token: write
-  contents: read
-  pages: write
+name: 🚀 Build and Deploy
 
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
   push:
     branches: [master]
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
-
-      - name: Install pnpm
-        run: npm i -g pnpm
-
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
-
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
+      - uses: denoland/setup-deno@v1
+      - uses: actions/setup-node@v3
         with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+          node-version: 18
 
-      - name: Install dependencies
-        run: pnpm install
+      - name: Install
+        run: npx pnpm i
 
       - name: Build
-        run: pnpm run build
+        run: npx pnpm run build
 
-      - name: deployment
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: "dist/"
-  deploy:
-    needs: build
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+      - name: Deploy
+        run: tasks/deploy.ts
+        env:
+          DENO_DEPLOY_TOKEN: ${{ secrets.DENO_DEPLOY_TOKEN }}
