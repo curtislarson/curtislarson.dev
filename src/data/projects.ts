@@ -14,21 +14,21 @@ export const PROJECT_DATA: ProjectProps[] = [
     tags: ["deno", "typescript", "ssr"],
   },
   {
-    href: "https://github.com/curtislarson/daotw",
-    title: "Drinkin' All Over the World",
+    href: "https://github.com/curtislarson/beers",
+    title: "Beers",
     preview: "A visualization of my Untappd checkins and travel history.",
     tags: ["vis", "leaflet", "data"],
   },
   {
     href: "https://github.com/curtislarson/spotify",
     title: "Spotify Now Playing",
-    preview: "Embed your currently playing song as a SVG in markdown",
+    preview: "Show your currently playing spotify song in a markdown file.",
     tags: ["deno", "typescript", "api", "ssr"],
   },
   {
     href: "https://github.com/curtislarson/shikisaurus",
     title: "Shikisaurus",
-    preview: "Embed auto updating code samples from any github repo in your markdown files.",
+    preview: "Beautiful auto updating code samples in your GitHub README.",
     tags: ["deno", "typescript", "github", "ssr"],
   },
   {
