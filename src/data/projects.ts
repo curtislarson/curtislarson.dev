@@ -2,6 +2,12 @@ import { ProjectProps } from "../pages/Project";
 
 export const PROJECT_DATA: ProjectProps[] = [
   {
+    href: "https://github.com/orgs/quackware/repositories?q=&type=all&language=typescript",
+    title: "Deno Utility Libraries",
+    preview: "A large collection of utility libraries for the Deno runtime",
+    tags: ["deno", "typescript"],
+  },
+  {
     href: "https://github.com/curtislarson/mdx-static",
     title: "MDX Static",
     preview: "A simple static site generator using MDX and Deno",
