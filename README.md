@@ -1,5 +1,7 @@
 # curtislarson.dev
 
+Code for https://curtislarson.dev
+
 ## Development
 
 ```zsh
@@ -12,6 +14,6 @@ pnpm run dev
 pnpm run build
 ```
 
-## TODO
+## Deployment
 
-- [ ] Move to Deno when I have a chance
+This is hosted on [Deno Deploy](https://deno.com/deploy)
