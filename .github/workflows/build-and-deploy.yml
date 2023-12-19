@@ -22,7 +22,10 @@ jobs:
       - name: Build
         run: npx pnpm run build
 
+      - name: Install deployctl
+        run: deno install -Arf https://deno.land/x/deploy/deployctl.ts
+
       - name: Deploy
-        run: tasks/deploy.ts
+        run: deno task deploy
         env:
           DENO_DEPLOY_TOKEN: ${{ secrets.DENO_DEPLOY_TOKEN }}
