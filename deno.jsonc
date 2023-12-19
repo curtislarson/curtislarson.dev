@@ -1,5 +1,6 @@
 {
   "tasks": {
+    "server": "./server.ts",
     "blog": "deno run -A --unstable --no-check --no-config ./blog/blog.ts",
     "watch": "deno run -A --unstable --no-check --no-config --watch=./blog/drafts,./blog/posts ./blog/blog.ts",
     "deploy": "./tasks/deploy.ts"
