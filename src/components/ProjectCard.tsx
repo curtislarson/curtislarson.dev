@@ -1,4 +1,5 @@
 import { ProjectData } from "../types";
+import TagBadge from "./TagBadge";
 
 export default function ProjectCard(project: ProjectData) {
   return (
@@ -10,9 +11,7 @@ export default function ProjectCard(project: ProjectData) {
           <div class="mt-4 flex items-center">
             <div class="flex space-x-1 text-sm">
               {project.tags.map((tag) => (
-                <div key={tag} class="badge badge-accent badge-outline">
-                  {tag}
-                </div>
+                <TagBadge key={tag} text={tag} />
               ))}
             </div>
           </div>

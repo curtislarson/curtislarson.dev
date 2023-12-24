@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { ProjectData } from "../types";
+import TagBadge from "../components/TagBadge";
 
 export interface ProjectProps extends ProjectData {}
 
@@ -16,9 +17,7 @@ export default function Project(props: ProjectProps) {
           <h1>
             <span class="block text-base text-center text-indigo-600 font-semibold tracking-wide uppercase">
               {props.tags.map((tag) => (
-                <div key={tag} class="badge badge-accent badge-outline mx-1">
-                  {tag}
-                </div>
+                <TagBadge key={tag} text={tag} />
               ))}
             </span>
             <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
