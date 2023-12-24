@@ -14,8 +14,10 @@ export default defineConfig({
     preact(),
     tsconfigPaths(),
   ],
+  root: "./packages/www",
   build: {
-    outDir: "dist",
+    outDir: "../../dist",
+    emptyOutDir: true,
     sourcemap: true,
     manifest: true,
   },

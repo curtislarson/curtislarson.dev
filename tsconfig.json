@@ -1,5 +1,5 @@
 {
-  "exclude": ["tasks", "node_modules", "./tailwind.config.cjs", "blog", "./server.ts"],
+  "exclude": ["tasks", "node_modules", "./tailwind.config.cjs", "blog", "./server.ts", "dist"],
   "compilerOptions": {
     "allowJs": true,
     "skipLibCheck": true,
@@ -35,10 +35,6 @@
     "strictNullChecks": true,
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "useUnknownInCatchVariables": true,
-    "paths": {
-      "css/*": ["./css/*"],
-      "img/*": ["./img/*"]
-    }
+    "useUnknownInCatchVariables": true
   }
 }
