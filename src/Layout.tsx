@@ -4,7 +4,7 @@ import { NavbarItemProps } from "./components/NavbarItem";
 import GithubIcon from "./icons/Github.svg";
 
 const NAVBAR_ITEMS: NavbarItemProps[] = [
-  { href: "https://curtislarson.dev/projects", text: "Projects" },
+  { href: "https://curtislarson.dev/projects", text: "Projects", active: window.location.pathname === "/projects" },
   {
     href: "https://nomadlist.com/@curtis",
     text: "Travel",
