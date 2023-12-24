@@ -1,28 +1,36 @@
-import { Link } from "react-router-dom";
+import Icon from "./Icon";
 
 export type NavbarItemProps = {
-  text: string;
-} & ({ href: string } | { to: string });
+  href: string;
+  /** @default "left" */
+  align?: "left" | "right";
+  active?: boolean;
+} & (
+  | {
+      text: string;
+    }
+  | { image: string; tooltip?: string }
+);
 
 export default function NavbarItem(props: NavbarItemProps) {
-  const path = "to" in props ? props.to : props.href;
-  const isInternaLink = "to" in props;
-
-  const linkItem = (
-    <li>
-      <span
-        class={`w-max btn normal-case active:btn-outline ${
-          location.pathname.endsWith(path) ? "btn-outline btn-primary" : "btn-ghost"
-        }`}
-      >
-        {props.text}
-      </span>
-    </li>
-  );
-
-  if (isInternaLink) {
-    return <Link to={path}>{linkItem}</Link>;
+  if ("image" in props) {
+    return (
+      <li>
+        <a href={props.href}>
+          <Icon src={props.image} tooltip={props.tooltip} />
+        </a>
+      </li>
+    );
   } else {
-    return <a href={path}>{linkItem}</a>;
+    return (
+      <li>
+        <a
+          href={props.href}
+          className={`btn w-max rounded-md normal-case ${props.active ? "btn-outline btn-primary" : "btn-ghost"}`}
+        >
+          {props.text}
+        </a>
+      </li>
+    );
   }
 }

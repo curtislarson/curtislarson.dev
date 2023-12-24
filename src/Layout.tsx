@@ -1,11 +1,25 @@
 import { Outlet } from "react-router-dom";
-import Navbar, { NavbarItem } from "./components/Navbar";
+import Navbar from "./components/Navbar";
+import { NavbarItemProps } from "./components/NavbarItem";
+import GithubIcon from "./icons/Github.svg";
 
-const NAVBAR_ITEMS: NavbarItem[] = [
-  { text: "Projects", to: "/projects" },
-  { text: "Travel", href: "https://nomadlist.com/@curtis" },
-  // { text: "Blog", href: "https://blog.curtislarson.dev" },
-  { text: "Beers", href: "https://beers.curtislarson.dev" },
+const NAVBAR_ITEMS: NavbarItemProps[] = [
+  { href: "https://curtislarson.dev/projects", text: "Projects" },
+  {
+    href: "https://nomadlist.com/@curtis",
+    text: "Travel",
+  },
+  {
+    href: "https://beers.curtislarson.dev",
+    text: "Beers",
+    active: true,
+  },
+  {
+    href: "https://github.com/curtislarson",
+    image: GithubIcon,
+    align: "right",
+    tooltip: "GitHub",
+  },
 ];
 
 export default function Layout() {

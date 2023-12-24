@@ -1,8 +1,13 @@
 {
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxFragmentFactory": "h",
+    "jsxImportSource": "https://esm.quack.id/preact"
+  },
   "tasks": {
     "server": "./server.ts",
-    "blog": "deno run -A --unstable --no-check --no-config ./blog/blog.ts",
-    "watch": "deno run -A --unstable --no-check --no-config --watch=./blog/drafts,./blog/posts ./blog/blog.ts",
+    "blog": "deno run -A --unstable --no-check ./blog/blog.ts",
+    "blog:watch": "deno run -A --unstable --no-check --watch=./blog/drafts,./blog/posts ./blog/blog.ts",
     "deploy": "deployctl deploy --project=curtislarson --prod server.ts --exclude=node_modules"
   }
 }

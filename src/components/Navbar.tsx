@@ -1,34 +1,48 @@
-import { useLocation } from "react-router-dom";
-import NavbarItem from "./NavbarItem";
-
-export type NavbarItem = {
-  text: string;
-} & ({ href: string } | { to: string });
+import Icon from "./Icon";
+import NavbarItem, { NavbarItemProps } from "./NavbarItem";
 
 export interface NavbarProps {
+  href?: string;
   logo: string;
   title: string;
-  /** @default "/" */
-  href?: string;
-  items?: NavbarItem[];
+  items?: NavbarItemProps[];
 }
 
 export default function Navbar(props: NavbarProps) {
-  const location = useLocation();
+  const { left, right } = (props.items ?? []).reduce<{ left: NavbarItemProps[]; right: NavbarItemProps[] }>(
+    (acc, item) => {
+      if (item.align === "right") {
+        acc.right.push(item);
+      } else {
+        acc.left.push(item);
+      }
+      return acc;
+    },
+    { left: [], right: [] }
+  );
 
   return (
-    <div class="navbar bg-base-200">
-      <div class="flex-none">
-        <a href={props.href ?? "/"} class="btn-ghost btn text-xl normal-case">
-          <img src={props.logo} alt={`${props.title} Logo`} class="h-8 w-8" />
-          <span class="ml-5">{props.title}</span>
+    <div className="navbar bg-base-200">
+      <div className="flex-none">
+        <a href={props.href ?? "/"} className="btn-ghost btn-xs btn sm:btn-md">
+          <Icon src={props.logo} tooltip="Quack" />
+          <span className="ml-5 text-xl normal-case">{props.title}</span>
         </a>
       </div>
-      <div class="flex-none">
-        {props.items && (
-          <ul class="menu menu-horizontal px-1">
-            {props.items.map((item) => (
-              <NavbarItem {...item} key={item.text} />
+      <div className="flex-1">
+        {left.length > 0 && (
+          <ul className="menu menu-horizontal px-1">
+            {left.map((item) => (
+              <NavbarItem {...item} key={item.href} />
+            ))}
+          </ul>
+        )}
+      </div>
+      <div className="flex-1 justify-end">
+        {right.length > 0 && (
+          <ul className="menu menu-horizontal">
+            {right.map((item) => (
+              <NavbarItem {...item} key={item.href} />
             ))}
           </ul>
         )}
