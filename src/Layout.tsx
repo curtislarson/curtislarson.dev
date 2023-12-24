@@ -12,7 +12,6 @@ const NAVBAR_ITEMS: NavbarItemProps[] = [
   {
     href: "https://beers.curtislarson.dev",
     text: "Beers",
-    active: true,
   },
   {
     href: "https://github.com/curtislarson",
