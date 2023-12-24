@@ -29,7 +29,7 @@ export default function Navbar(props: NavbarProps) {
           <span className="ml-5 text-xl normal-case">{props.title}</span>
         </a>
       </div>
-      <div className="flex-1">
+      <div className="flex-1 mt-1">
         {left.length > 0 && (
           <ul className="menu menu-horizontal px-1">
             {left.map((item) => (

@@ -26,7 +26,7 @@ export default function NavbarItem(props: NavbarItemProps) {
       <li>
         <a
           href={props.href}
-          className={`btn w-max rounded-md normal-case ${props.active ? "btn-outline btn-primary" : "btn-ghost"}`}
+          className={`w-max rounded-md normal-case ${props.active ? "btn-outline btn-primary" : "btn-ghost"}`}
         >
           {props.text}
         </a>
