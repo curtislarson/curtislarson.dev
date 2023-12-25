@@ -26,7 +26,7 @@ export default function Navbar(props: NavbarProps) {
       <div className="flex-none">
         <a href={props.href ?? "/"} className="btn-ghost btn-xs btn sm:btn-md">
           <Icon src={props.logo} tooltip="Quack" />
-          <span className="ml-5 text-xl normal-case">{props.title}</span>
+          <span className="ml-5 text-xl normal-case sm:block hidden">{props.title}</span>
         </a>
       </div>
       <div className="flex-1 mt-1">
@@ -38,7 +38,7 @@ export default function Navbar(props: NavbarProps) {
           </ul>
         )}
       </div>
-      <div className="flex-1 justify-end">
+      <div className="flex-none justify-end">
         {right.length > 0 && (
           <ul className="menu menu-horizontal">
             {right.map((item) => (

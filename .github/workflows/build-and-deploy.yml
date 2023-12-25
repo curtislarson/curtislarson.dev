@@ -14,9 +14,9 @@ jobs:
       - uses: denoland/setup-deno@v1
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20.10.0
 
-      - name: Install
+      - name: Install pnpm Dependencies
         run: npx pnpm i
 
       - name: Build
