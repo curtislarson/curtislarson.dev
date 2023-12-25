@@ -2,7 +2,8 @@ import { ProjectProps } from "../pages/Project";
 
 export const PROJECT_DATA: ProjectProps[] = [
   {
-    href: "https://github.com/orgs/quackware/repositories?q=&type=all&language=typescript",
+    href:
+      "https://github.com/orgs/quackware/repositories?q=&type=all&language=typescript",
     title: "Deno Utility Libraries",
     preview: "A large collection of utility libraries for the Deno runtime",
     tags: ["deno", "typescript"],
@@ -14,7 +15,7 @@ export const PROJECT_DATA: ProjectProps[] = [
     tags: ["deno", "typescript", "ssr"],
   },
   {
-    href: "https://github.com/curtislarson/beers",
+    href: "https://beers.curtislarson.dev",
     title: "Beers",
     preview: "A visualization of my Untappd checkins and travel history.",
     tags: ["vis", "leaflet", "data"],
