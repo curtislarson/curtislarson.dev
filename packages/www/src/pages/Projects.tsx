@@ -1,7 +1,20 @@
+import { useSearchParams } from "react-router-dom";
 import ProjectCard from "../components/ProjectCard";
 import { PROJECT_DATA } from "../data/projects";
+import { ProjectProps } from "./Project";
 
 export default function Projects() {
+  const [params] = useSearchParams();
+
+  const tag = params.get("tag");
+
+  let projectData: ProjectProps[] = [];
+  if (tag) {
+    projectData = PROJECT_DATA.filter((p) => p.tags.includes(tag));
+  } else {
+    projectData = PROJECT_DATA;
+  }
+
   return (
     <div class="pt-8 pb-20 px-4 flex flex-col">
       <div class="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl mb-10">
@@ -10,7 +23,7 @@ export default function Projects() {
           <h5 class="flex-1 ml-3 mt-4">Things I hack on in my free time</h5>
         </div>
         <div class="mt-4 grid gap-16 pt-4 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
-          {PROJECT_DATA.map((project, idx) => (
+          {projectData.map((project, idx) => (
             <ProjectCard key={idx} {...project} />
           ))}
         </div>
