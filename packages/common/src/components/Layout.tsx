@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import { NavbarItemProps } from "./components/NavbarItem";
-import GithubIcon from "./icons/Github.svg";
-import { isMainSite } from "./utilities/url";
+import GithubIcon from "../icons/Github.svg";
+import { isMainSite } from "../utilities/url.ts";
+import { NavbarItemProps } from "./NavbarItem.tsx";
+import Navbar from "./Navbar.tsx";
 
 const NAVBAR_ITEMS: NavbarItemProps[] = [
   {

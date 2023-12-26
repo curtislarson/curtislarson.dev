@@ -7,8 +7,6 @@
   "tasks": {
     "server": "./server.ts",
     "server:watch": "deno run -A --no-check --unstable --watch ./server.ts",
-    "blog": "deno run -A --unstable --no-check ./blog/blog.ts",
-    "blog:watch": "deno run -A --unstable --no-check --watch=./blog/drafts,./blog/posts ./blog/blog.ts",
     "deploy": "deployctl deploy --project=curtislarson --prod server.ts --exclude=node_modules"
   }
 }
