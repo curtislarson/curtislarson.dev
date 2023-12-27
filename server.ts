@@ -8,6 +8,7 @@ const app = new Hono();
 
 app.get("/assets/*", serveStatic({ root: "./dist/" }));
 app.get("/quack.png", serveStatic({ path: "./dist/quack.png" }));
+app.get("/resume.pdf", serveStatic({ path: "./dist/resume.pdf" }));
 app.get("/favicon.ico", serveStatic({ path: "./dist/favicon.ico" }));
 
 app.get("*", serveStatic({ path: "./dist/index.html" }));
