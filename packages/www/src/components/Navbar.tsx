@@ -33,7 +33,7 @@ export default function Navbar(props: NavbarProps) {
         {left.length > 0 && (
           <ul className="menu menu-horizontal px-1">
             {left.map((item) => (
-              <NavbarItem {...item} key={item.href} />
+              <NavbarItem {...item} key={item.id} />
             ))}
           </ul>
         )}
@@ -42,7 +42,7 @@ export default function Navbar(props: NavbarProps) {
         {right.length > 0 && (
           <ul className="menu menu-horizontal">
             {right.map((item) => (
-              <NavbarItem {...item} key={item.href} />
+              <NavbarItem {...item} key={item.id} />
             ))}
           </ul>
         )}

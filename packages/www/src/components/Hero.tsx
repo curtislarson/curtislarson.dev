@@ -45,6 +45,14 @@ export default function Hero() {
             </a>
           </p>
         </div>
+        <div class="divider"></div>
+        <div class="flex flex-row">
+          <p class="text-primary py-2 px-2">
+            <a href="https://quack.software" alt="QuackWare" class="text-info underline">
+              QuackWare - Software & DevOps Consulting
+            </a>
+          </p>
+        </div>
       </div>
       <dialog id="contactModal" class="modal" ref={contactModal}>
         <div class="modal-box">

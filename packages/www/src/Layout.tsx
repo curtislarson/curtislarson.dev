@@ -6,19 +6,23 @@ import { isMainSite } from "./utilities/url";
 
 const NAVBAR_ITEMS: NavbarItemProps[] = [
   {
+    id: "projects",
     href: isMainSite() ? "/projects" : "https://curtislarson.dev/projects",
     text: "Projects",
     active: window.location.pathname === "/projects",
   },
   {
+    id: "travel",
     href: "https://nomadlist.com/@curtis",
     text: "Travel",
   },
   {
+    id: "beers",
     href: "https://beers.curtislarson.dev",
     text: "Beers",
   },
   {
+    id: "github",
     href: "https://github.com/curtislarson",
     image: GithubIcon,
     align: "right",

@@ -1,19 +1,36 @@
 import Icon from "./Icon";
 
-export type NavbarItemProps = {
-  href: string;
+export interface NavbarItemBase {
+  id: string;
   /** @default "left" */
   align?: "left" | "right";
+}
+
+export interface NavbarItemDivider extends NavbarItemBase {
+  divider: true;
+}
+
+export interface NavbarItemLink extends NavbarItemBase {
+  href: string;
   active?: boolean;
-} & (
-  | {
-      text: string;
-    }
-  | { image: string; tooltip?: string }
-);
+  divider?: false;
+}
+
+export interface NavbarItemLinkText extends NavbarItemLink {
+  text: string;
+}
+
+export interface NavbarItemLinkImage extends NavbarItemLink {
+  image: string;
+  tooltip?: string;
+}
+
+export type NavbarItemProps = NavbarItemDivider | NavbarItemLinkText | NavbarItemLinkImage;
 
 export default function NavbarItem(props: NavbarItemProps) {
-  if ("image" in props) {
+  if (props.divider) {
+    return <div class="divider divider-horizontal mx-0 sm:flex hidden"></div>;
+  } else if ("image" in props) {
     return (
       <li>
         <a href={props.href}>

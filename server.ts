@@ -1,4 +1,6 @@
 #!/usr/bin/env -S deno run -A --no-check --unstable
+/// <reference lib="deno.ns" />
+/// <reference lib="deno.unstable" />
 
 // Auto load from `.env` files if available
 import { load } from "https://deno.land/std@0.210.0/dotenv/mod.ts";
