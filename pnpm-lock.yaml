@@ -39,8 +39,15 @@ importers:
         specifier: 4.2.2
         version: 4.2.2(typescript@5.3.3)(vite@5.0.10)
 
+  packages/common: {}
+
+  packages/server: {}
+
   packages/www:
     dependencies:
+      '@curtis.land/common':
+        specifier: ../common
+        version: link:../common
       preact:
         specifier: 10.19.3
         version: 10.19.3

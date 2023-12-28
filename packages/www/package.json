@@ -5,6 +5,7 @@
     "preact": "10.19.3",
     "react": "npm:@preact/compat@^17.1.2",
     "react-dom": "npm:@preact/compat@^17.1.2",
-    "react-router-dom": "6.21.1"
+    "react-router-dom": "6.21.1",
+    "@curtis.land/common": "../common"
   }
 }
