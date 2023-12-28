@@ -1,4 +1,22 @@
+import { createRef } from "preact";
+import { useCallback } from "preact/hooks";
+import ContactForm from "./ContactForm";
+
 export default function Hero() {
+  const contactModal = createRef<HTMLDialogElement>();
+
+  const onContactClicked = useCallback(() => {
+    if (contactModal.current) {
+      contactModal.current.showModal();
+    }
+  }, [contactModal]);
+
+  const onContactModalCloseClicked = useCallback(() => {
+    if (contactModal.current) {
+      contactModal.current.close();
+    }
+  }, []);
+
   return (
     <div class="hero min-h-[70vh]">
       <div class="items-center justify-center max-w-full gap-4 p-4 flex flex-col text-center">
@@ -6,8 +24,8 @@ export default function Hero() {
         <h2 class="text-lg sm:text-2xl mt-2 font-light">Full Stack Software Developer</h2>
         <div class="flex flex-row">
           <p class="text-primary py-2 px-2">
-            <a href="mailto:hi@curtislarson.dev" alt="Contact" class="btn btn-primary">
-              Email
+            <a alt="Contact" class="btn btn-primary" onClick={onContactClicked}>
+              Contact
             </a>
           </p>
           <p class="text-primary py-2 px-2">
@@ -28,6 +46,12 @@ export default function Hero() {
           </p>
         </div>
       </div>
+      <dialog id="contactModal" class="modal" ref={contactModal}>
+        <div class="modal-box">
+          <h3 class="font-bold text-lg">Contact Form</h3>
+          <ContactForm contactId="homepage_contact" onCloseClicked={onContactModalCloseClicked} />
+        </div>
+      </dialog>
     </div>
   );
 }
