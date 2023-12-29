@@ -4,22 +4,19 @@ layout: home
 
 hero:
   name: "Curtis Larson's Guides and Documentation"
-  text: "Curtis Larson's Guides and Documentation"
-  tagline: My great project tagline
+  tagline: Useful guides and documentation for Software Development
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
-
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      text: Guides
+      link: /guides/
+    # - theme: alt
+    #   text: API Examples
+    #   link: /api-examples
+# features:
+#   - title: Feature A
+#     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+#   - title: Feature B
+#     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+#   - title: Feature C
+#     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
-
