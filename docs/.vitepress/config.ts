@@ -24,8 +24,6 @@ function getGuidesSidebarItems() {
     };
   }).filter((v): v is NonNullable<typeof v> => v != null);
 
-  console.log({ sidebarItems });
-
   return sidebarItems;
 }
 
