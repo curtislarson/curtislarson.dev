@@ -34,7 +34,7 @@ importers:
         version: 5.3.3
       vite:
         specifier: 5.0.10
-        version: 5.0.10
+        version: 5.0.10(@types/node@20.10.5)
       vite-tsconfig-paths:
         specifier: 4.2.2
         version: 4.2.2(typescript@5.3.3)(vite@5.0.10)
@@ -43,13 +43,11 @@ importers:
     dependencies:
       vitepress:
         specifier: 1.0.0-rc.31
-        version: 1.0.0-rc.31(@algolia/client-search@4.22.0)(postcss@8.4.32)(search-insights@2.13.0)(typescript@5.3.3)
-
-  packages/blog:
-    dependencies:
-      vitepress:
-        specifier: ^1.0.0-rc.33
-        version: 1.0.0-rc.33(@algolia/client-search@4.22.0)(postcss@8.4.32)(search-insights@2.13.0)(typescript@5.3.3)
+        version: 1.0.0-rc.31(@algolia/client-search@4.22.0)(@types/node@20.10.5)(postcss@8.4.32)(search-insights@2.13.0)(typescript@5.3.3)
+    devDependencies:
+      '@types/node':
+        specifier: 20.10.5
+        version: 20.10.5
 
   packages/common:
     dependencies:
@@ -800,7 +798,7 @@ packages:
       debug: 4.3.4
       kolorist: 1.8.0
       resolve: 1.22.8
-      vite: 5.0.10
+      vite: 5.0.10(@types/node@20.10.5)
     transitivePeerDependencies:
       - preact
       - supports-color
@@ -834,7 +832,7 @@ packages:
       '@prefresh/utils': 1.2.0
       '@rollup/pluginutils': 4.2.1
       preact: 10.19.3
-      vite: 5.0.10
+      vite: 5.0.10(@types/node@20.10.5)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -970,6 +968,11 @@ packages:
     resolution: {integrity: sha512-6L6VymKTzYSrEf4Nev4Xa1LCHKrlTlYCBMTlQKFuddo1CvQcE52I0mwfOJayueUC7MJuXOeHTcIU683lzd0cUA==, tarball: https://registry.npmjs.org/@types/mdurl/-/mdurl-1.0.5.tgz}
     dev: false
 
+  /@types/node@20.10.5:
+    resolution: {integrity: sha512-nNPsNE65wjMxEKI93yOP+NPGGBJz/PoN3kZsVLee0XMiJolxSekEVD8wRwBUBqkwc7UWop0edW50yrCQW4CyRw==, tarball: https://registry.npmjs.org/@types/node/-/node-20.10.5.tgz}
+    dependencies:
+      undici-types: 5.26.5
+
   /@types/unist@3.0.2:
     resolution: {integrity: sha512-dqId9J8K/vGi5Zr7oo212BGii5m3q5Hxlkwy3WpYuKPklmBEvsbMYYyLxAQpSffdLl/gdW0XUpKWFvYmyoWCoQ==, tarball: https://registry.npmjs.org/@types/unist/-/unist-3.0.2.tgz}
     dev: false
@@ -989,19 +992,8 @@ packages:
       vite: ^4.0.0 || ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 5.0.10
+      vite: 5.0.10(@types/node@20.10.5)
       vue: 3.3.13(typescript@5.3.3)
-    dev: false
-
-  /@vitejs/plugin-vue@5.0.0(vite@5.0.10)(vue@3.4.0-rc.2):
-    resolution: {integrity: sha512-7x5e8X4J1Wi4NxudGjJBd2OFerAi/0nzF80ojCzvfj347WVr0YSn82C8BSsgwSHzlk9Kw5xnZfj0/7RLnNwP5w==, tarball: https://registry.npmjs.org/@vitejs/plugin-vue/-/plugin-vue-5.0.0.tgz}
-    engines: {node: ^18.0.0 || >=20.0.0}
-    peerDependencies:
-      vite: ^5.0.0
-      vue: ^3.2.25
-    dependencies:
-      vite: 5.0.10
-      vue: 3.4.0-rc.2(typescript@5.3.3)
     dev: false
 
   /@vue/compiler-core@3.3.13:
@@ -1013,28 +1005,11 @@ packages:
       source-map-js: 1.0.2
     dev: false
 
-  /@vue/compiler-core@3.4.0-rc.2:
-    resolution: {integrity: sha512-UMcGc7JUJyOA/HR3PoGewcFSJK8oQ3OQc7yLsCa4K9HvvL8A7/GVcuVIgP0HpSoEI1vPi2XzyFzt+Z87B+0trw==, tarball: https://registry.npmjs.org/@vue/compiler-core/-/compiler-core-3.4.0-rc.2.tgz}
-    dependencies:
-      '@babel/parser': 7.23.6
-      '@vue/shared': 3.4.0-rc.2
-      entities: 4.5.0
-      estree-walker: 2.0.2
-      source-map-js: 1.0.2
-    dev: false
-
   /@vue/compiler-dom@3.3.13:
     resolution: {integrity: sha512-EYRDpbLadGtNL0Gph+HoKiYqXLqZ0xSSpR5Dvnu/Ep7ggaCbjRDIus1MMxTS2Qm0koXED4xSlvTZaTnI8cYAsw==, tarball: https://registry.npmjs.org/@vue/compiler-dom/-/compiler-dom-3.3.13.tgz}
     dependencies:
       '@vue/compiler-core': 3.3.13
       '@vue/shared': 3.3.13
-    dev: false
-
-  /@vue/compiler-dom@3.4.0-rc.2:
-    resolution: {integrity: sha512-9a2YlLtxbP9cIJBNesiebhYorTlApT3zCwQGbeLdwbvqZKAUTWaNlnGdoZoFi1FFlfMvGF2f+GNjGXgDtKj9jQ==, tarball: https://registry.npmjs.org/@vue/compiler-dom/-/compiler-dom-3.4.0-rc.2.tgz}
-    dependencies:
-      '@vue/compiler-core': 3.4.0-rc.2
-      '@vue/shared': 3.4.0-rc.2
     dev: false
 
   /@vue/compiler-sfc@3.3.13:
@@ -1052,32 +1027,11 @@ packages:
       source-map-js: 1.0.2
     dev: false
 
-  /@vue/compiler-sfc@3.4.0-rc.2:
-    resolution: {integrity: sha512-ZKUWH4jMxyGCVpVW/7r4lmnLoMOcjFHlX+RGGarozeaH8wIap/IN1v1WM6h2BnY+yhTV5gykg7EhhSRLyX9rpA==, tarball: https://registry.npmjs.org/@vue/compiler-sfc/-/compiler-sfc-3.4.0-rc.2.tgz}
-    dependencies:
-      '@babel/parser': 7.23.6
-      '@vue/compiler-core': 3.4.0-rc.2
-      '@vue/compiler-dom': 3.4.0-rc.2
-      '@vue/compiler-ssr': 3.4.0-rc.2
-      '@vue/shared': 3.4.0-rc.2
-      estree-walker: 2.0.2
-      magic-string: 0.30.5
-      postcss: 8.4.32
-      source-map-js: 1.0.2
-    dev: false
-
   /@vue/compiler-ssr@3.3.13:
     resolution: {integrity: sha512-d/P3bCeUGmkJNS1QUZSAvoCIW4fkOKK3l2deE7zrp0ypJEy+En2AcypIkqvcFQOcw3F0zt2VfMvNsA9JmExTaw==, tarball: https://registry.npmjs.org/@vue/compiler-ssr/-/compiler-ssr-3.3.13.tgz}
     dependencies:
       '@vue/compiler-dom': 3.3.13
       '@vue/shared': 3.3.13
-    dev: false
-
-  /@vue/compiler-ssr@3.4.0-rc.2:
-    resolution: {integrity: sha512-+XvAn6TKYJ+Y2xsvjMhE0auC31/i1TVPrkdoXKLMXYAK0VvS6EPhtVN2ii9A2oP1CLsFa/VQErTzXtmnsAwuPA==, tarball: https://registry.npmjs.org/@vue/compiler-ssr/-/compiler-ssr-3.4.0-rc.2.tgz}
-    dependencies:
-      '@vue/compiler-dom': 3.4.0-rc.2
-      '@vue/shared': 3.4.0-rc.2
     dev: false
 
   /@vue/devtools-api@6.5.1:
@@ -1100,12 +1054,6 @@ packages:
       '@vue/shared': 3.3.13
     dev: false
 
-  /@vue/reactivity@3.4.0-rc.2:
-    resolution: {integrity: sha512-Ls8agGUZGz+T30KfP0euW12lbRQfgm/gjKTp6oyArEXS6SD3XnQ718K6fmtVjL3DlfM0UI1+QpL49WcDdN35qg==, tarball: https://registry.npmjs.org/@vue/reactivity/-/reactivity-3.4.0-rc.2.tgz}
-    dependencies:
-      '@vue/shared': 3.4.0-rc.2
-    dev: false
-
   /@vue/runtime-core@3.3.13:
     resolution: {integrity: sha512-1TzA5TvGuh2zUwMJgdfvrBABWZ7y8kBwBhm7BXk8rvdx2SsgcGfz2ruv2GzuGZNvL1aKnK8CQMV/jFOrxNQUMA==, tarball: https://registry.npmjs.org/@vue/runtime-core/-/runtime-core-3.3.13.tgz}
     dependencies:
@@ -1113,26 +1061,11 @@ packages:
       '@vue/shared': 3.3.13
     dev: false
 
-  /@vue/runtime-core@3.4.0-rc.2:
-    resolution: {integrity: sha512-dE0sP7PiBLrKxGk/F+bdDrTUCg04o32KrZo02mnSUWnlBPjg9ymHB7t65/U4Cru4yG81Wpy9U4beIDzeK1YMWw==, tarball: https://registry.npmjs.org/@vue/runtime-core/-/runtime-core-3.4.0-rc.2.tgz}
-    dependencies:
-      '@vue/reactivity': 3.4.0-rc.2
-      '@vue/shared': 3.4.0-rc.2
-    dev: false
-
   /@vue/runtime-dom@3.3.13:
     resolution: {integrity: sha512-JJkpE8R/hJKXqVTgUoODwS5wqKtOsmJPEqmp90PDVGygtJ4C0PtOkcEYXwhiVEmef6xeXcIlrT3Yo5aQ4qkHhQ==, tarball: https://registry.npmjs.org/@vue/runtime-dom/-/runtime-dom-3.3.13.tgz}
     dependencies:
       '@vue/runtime-core': 3.3.13
       '@vue/shared': 3.3.13
-      csstype: 3.1.3
-    dev: false
-
-  /@vue/runtime-dom@3.4.0-rc.2:
-    resolution: {integrity: sha512-gsyLBJeMWh5wg1MqnlDy5/0uDMrnJGxuLxEL+rAEc/OlTFX5woSHwjoypE/E7oBwO4z/nETRSzY/ph+Zqh/h9Q==, tarball: https://registry.npmjs.org/@vue/runtime-dom/-/runtime-dom-3.4.0-rc.2.tgz}
-    dependencies:
-      '@vue/runtime-core': 3.4.0-rc.2
-      '@vue/shared': 3.4.0-rc.2
       csstype: 3.1.3
     dev: false
 
@@ -1146,22 +1079,8 @@ packages:
       vue: 3.3.13(typescript@5.3.3)
     dev: false
 
-  /@vue/server-renderer@3.4.0-rc.2(vue@3.4.0-rc.2):
-    resolution: {integrity: sha512-5+9/+8K3bPAIev1S49T1gw+IhelWUl1p6Ypj+yb4GHCpsRlB7FATNF7bGnQ10wAlrVgjfuG+0m4GOzqOPhrncQ==, tarball: https://registry.npmjs.org/@vue/server-renderer/-/server-renderer-3.4.0-rc.2.tgz}
-    peerDependencies:
-      vue: 3.4.0-rc.2
-    dependencies:
-      '@vue/compiler-ssr': 3.4.0-rc.2
-      '@vue/shared': 3.4.0-rc.2
-      vue: 3.4.0-rc.2(typescript@5.3.3)
-    dev: false
-
   /@vue/shared@3.3.13:
     resolution: {integrity: sha512-/zYUwiHD8j7gKx2argXEMCUXVST6q/21DFU0sTfNX0URJroCe3b1UF6vLJ3lQDfLNIiiRl2ONp7Nh5UVWS6QnA==, tarball: https://registry.npmjs.org/@vue/shared/-/shared-3.3.13.tgz}
-    dev: false
-
-  /@vue/shared@3.4.0-rc.2:
-    resolution: {integrity: sha512-ZynnK2vWLBcCEdMsyHUWIzbqhRjnTSv/eolFO+okzf5LLQqlasi/7qeo4mYzGhyPvGb0XltxCZmzTtTcJtlxkw==, tarball: https://registry.npmjs.org/@vue/shared/-/shared-3.4.0-rc.2.tgz}
     dev: false
 
   /@vueuse/core@10.7.0(vue@3.3.13):
@@ -1171,18 +1090,6 @@ packages:
       '@vueuse/metadata': 10.7.0
       '@vueuse/shared': 10.7.0(vue@3.3.13)
       vue-demi: 0.14.6(vue@3.3.13)
-    transitivePeerDependencies:
-      - '@vue/composition-api'
-      - vue
-    dev: false
-
-  /@vueuse/core@10.7.0(vue@3.4.0-rc.2):
-    resolution: {integrity: sha512-4EUDESCHtwu44ZWK3Gc/hZUVhVo/ysvdtwocB5vcauSV4B7NiGY5972WnsojB3vRNdxvAt7kzJWE2h9h7C9d5w==, tarball: https://registry.npmjs.org/@vueuse/core/-/core-10.7.0.tgz}
-    dependencies:
-      '@types/web-bluetooth': 0.0.20
-      '@vueuse/metadata': 10.7.0
-      '@vueuse/shared': 10.7.0(vue@3.4.0-rc.2)
-      vue-demi: 0.14.6(vue@3.4.0-rc.2)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -1238,56 +1145,6 @@ packages:
       - vue
     dev: false
 
-  /@vueuse/integrations@10.7.0(focus-trap@7.5.4)(vue@3.4.0-rc.2):
-    resolution: {integrity: sha512-rxiMYgS+91n93qXpHZF9NbHhppWY6IJyVTDxt4acyChL0zZVx7P8FAAfpF1qVK8e4wfjerhpEiMJ0IZ1GWUZ2A==, tarball: https://registry.npmjs.org/@vueuse/integrations/-/integrations-10.7.0.tgz}
-    peerDependencies:
-      async-validator: '*'
-      axios: '*'
-      change-case: '*'
-      drauu: '*'
-      focus-trap: '*'
-      fuse.js: '*'
-      idb-keyval: '*'
-      jwt-decode: '*'
-      nprogress: '*'
-      qrcode: '*'
-      sortablejs: '*'
-      universal-cookie: '*'
-    peerDependenciesMeta:
-      async-validator:
-        optional: true
-      axios:
-        optional: true
-      change-case:
-        optional: true
-      drauu:
-        optional: true
-      focus-trap:
-        optional: true
-      fuse.js:
-        optional: true
-      idb-keyval:
-        optional: true
-      jwt-decode:
-        optional: true
-      nprogress:
-        optional: true
-      qrcode:
-        optional: true
-      sortablejs:
-        optional: true
-      universal-cookie:
-        optional: true
-    dependencies:
-      '@vueuse/core': 10.7.0(vue@3.4.0-rc.2)
-      '@vueuse/shared': 10.7.0(vue@3.4.0-rc.2)
-      focus-trap: 7.5.4
-      vue-demi: 0.14.6(vue@3.4.0-rc.2)
-    transitivePeerDependencies:
-      - '@vue/composition-api'
-      - vue
-    dev: false
-
   /@vueuse/metadata@10.7.0:
     resolution: {integrity: sha512-GlaH7tKP2iBCZ3bHNZ6b0cl9g0CJK8lttkBNUX156gWvNYhTKEtbweWLm9rxCPIiwzYcr/5xML6T8ZUEt+DkvA==, tarball: https://registry.npmjs.org/@vueuse/metadata/-/metadata-10.7.0.tgz}
     dev: false
@@ -1296,15 +1153,6 @@ packages:
     resolution: {integrity: sha512-kc00uV6CiaTdc3i1CDC4a3lBxzaBE9AgYNtFN87B5OOscqeWElj/uza8qVDmk7/U8JbqoONLbtqiLJ5LGRuqlw==, tarball: https://registry.npmjs.org/@vueuse/shared/-/shared-10.7.0.tgz}
     dependencies:
       vue-demi: 0.14.6(vue@3.3.13)
-    transitivePeerDependencies:
-      - '@vue/composition-api'
-      - vue
-    dev: false
-
-  /@vueuse/shared@10.7.0(vue@3.4.0-rc.2):
-    resolution: {integrity: sha512-kc00uV6CiaTdc3i1CDC4a3lBxzaBE9AgYNtFN87B5OOscqeWElj/uza8qVDmk7/U8JbqoONLbtqiLJ5LGRuqlw==, tarball: https://registry.npmjs.org/@vueuse/shared/-/shared-10.7.0.tgz}
-    dependencies:
-      vue-demi: 0.14.6(vue@3.4.0-rc.2)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -2026,11 +1874,6 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /mrmime@2.0.0:
-    resolution: {integrity: sha512-eu38+hdgojoyq63s+yTpN4XMBdt5l8HhMhc4VKLO9KM5caLIBvUm4thi7fFaxyTmCKeNnXZ5pAlBwCUnhA09uw==, tarball: https://registry.npmjs.org/mrmime/-/mrmime-2.0.0.tgz}
-    engines: {node: '>=10'}
-    dev: false
-
   /ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==, tarball: https://registry.npmjs.org/ms/-/ms-2.1.2.tgz}
     dev: true
@@ -2304,32 +2147,16 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /shikiji-core@0.9.12:
-    resolution: {integrity: sha512-AYsAtsbZuq0FPT3mdskNMa+yxD5VwXrFC2sH7R2ELmncVGNYvSzR6Zlfq8iEzINq7/kKL5prtt81UFzFWTTbxQ==, tarball: https://registry.npmjs.org/shikiji-core/-/shikiji-core-0.9.12.tgz}
-    dev: false
-
   /shikiji-transformers@0.7.6:
     resolution: {integrity: sha512-yTp+7JMD/aXbV9ndn14eo9IK/UNt8iDsLNyqlOmCtcldlkqWE9T2YKAlOHOTVaeDfYWUWZa2EgSXb/CBfepBrw==, tarball: https://registry.npmjs.org/shikiji-transformers/-/shikiji-transformers-0.7.6.tgz}
     dependencies:
       shikiji: 0.7.6
     dev: false
 
-  /shikiji-transformers@0.9.12:
-    resolution: {integrity: sha512-ge+47j4MLTbKAnTnhTTolD9DKGW2Fhp80MV7Tb2E+p4HsJixu4slq2SDV/eFR34iH/egtyi/cjGMD8vJbNLBUA==, tarball: https://registry.npmjs.org/shikiji-transformers/-/shikiji-transformers-0.9.12.tgz}
-    dependencies:
-      shikiji: 0.9.12
-    dev: false
-
   /shikiji@0.7.6:
     resolution: {integrity: sha512-KzEtvSGQtBvfwVIB70kOmIfl/5rz1LC8j+tvlHXsJKAIdONNQvG1at7ivUUq3xUctqgO6fsO3AGomUSh0F+wsQ==, tarball: https://registry.npmjs.org/shikiji/-/shikiji-0.7.6.tgz}
     dependencies:
       hast-util-to-html: 9.0.0
-    dev: false
-
-  /shikiji@0.9.12:
-    resolution: {integrity: sha512-jYbulSGcPKYKu2uFZOSg4lgrF7s9s8/ITFzRvczE6633wypMjnnTcRnG/mCFe6v1Dbov7bRCMsXVINBUD2FV9w==, tarball: https://registry.npmjs.org/shikiji/-/shikiji-0.9.12.tgz}
-    dependencies:
-      shikiji-core: 0.9.12
     dev: false
 
   /signal-exit@4.1.0:
@@ -2495,6 +2322,9 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
+  /undici-types@5.26.5:
+    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==, tarball: https://registry.npmjs.org/undici-types/-/undici-types-5.26.5.tgz}
+
   /unist-util-is@6.0.0:
     resolution: {integrity: sha512-2qCTHimwdxLfz+YzdGfkqNlH0tLi9xjTnHddPmJwtIG9MGsdbutfTc4P+haPD7l7Cjxf/WZj+we5qfVPvvxfYw==, tarball: https://registry.npmjs.org/unist-util-is/-/unist-util-is-6.0.0.tgz}
     dependencies:
@@ -2576,13 +2406,13 @@ packages:
       debug: 4.3.4
       globrex: 0.1.2
       tsconfck: 2.1.1(typescript@5.3.3)
-      vite: 5.0.10
+      vite: 5.0.10(@types/node@20.10.5)
     transitivePeerDependencies:
       - supports-color
       - typescript
     dev: true
 
-  /vite@5.0.10:
+  /vite@5.0.10(@types/node@20.10.5):
     resolution: {integrity: sha512-2P8J7WWgmc355HUMlFrwofacvr98DAjoE52BfdbwQtyLH06XKwaL/FMnmKM2crF0iX4MpmMKoDlNCB1ok7zHCw==, tarball: https://registry.npmjs.org/vite/-/vite-5.0.10.tgz}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -2610,13 +2440,14 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': 20.10.5
       esbuild: 0.19.10
       postcss: 8.4.32
       rollup: 4.9.1
     optionalDependencies:
       fsevents: 2.3.3
 
-  /vitepress@1.0.0-rc.31(@algolia/client-search@4.22.0)(postcss@8.4.32)(search-insights@2.13.0)(typescript@5.3.3):
+  /vitepress@1.0.0-rc.31(@algolia/client-search@4.22.0)(@types/node@20.10.5)(postcss@8.4.32)(search-insights@2.13.0)(typescript@5.3.3):
     resolution: {integrity: sha512-ikH9pIjOOAbyoYAGBVfTz8TzuXp+UoWaIRMU4bw/oiTg8R65SbAaGKY84xx6TuL+f4VqUJ8lhzW82YyxSLvstA==, tarball: https://registry.npmjs.org/vitepress/-/vitepress-1.0.0-rc.31.tgz}
     hasBin: true
     peerDependencies:
@@ -2642,64 +2473,8 @@ packages:
       postcss: 8.4.32
       shikiji: 0.7.6
       shikiji-transformers: 0.7.6
-      vite: 5.0.10
+      vite: 5.0.10(@types/node@20.10.5)
       vue: 3.3.13(typescript@5.3.3)
-    transitivePeerDependencies:
-      - '@algolia/client-search'
-      - '@types/node'
-      - '@types/react'
-      - '@vue/composition-api'
-      - async-validator
-      - axios
-      - change-case
-      - drauu
-      - fuse.js
-      - idb-keyval
-      - jwt-decode
-      - less
-      - lightningcss
-      - nprogress
-      - qrcode
-      - react
-      - react-dom
-      - sass
-      - search-insights
-      - sortablejs
-      - stylus
-      - sugarss
-      - terser
-      - typescript
-      - universal-cookie
-    dev: false
-
-  /vitepress@1.0.0-rc.33(@algolia/client-search@4.22.0)(postcss@8.4.32)(search-insights@2.13.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-XMwr5eXEB3KB1uCuOkojVaqsVSijmd6N9QmaM2M6aqJqzXzxNwuvWSiEGYl4qbwRAX6/nFRofhx9+FndtCNjGQ==, tarball: https://registry.npmjs.org/vitepress/-/vitepress-1.0.0-rc.33.tgz}
-    hasBin: true
-    peerDependencies:
-      markdown-it-mathjax3: ^4.3.2
-      postcss: ^8.4.32
-    peerDependenciesMeta:
-      markdown-it-mathjax3:
-        optional: true
-      postcss:
-        optional: true
-    dependencies:
-      '@docsearch/css': 3.5.2
-      '@docsearch/js': 3.5.2(@algolia/client-search@4.22.0)(search-insights@2.13.0)
-      '@types/markdown-it': 13.0.7
-      '@vitejs/plugin-vue': 5.0.0(vite@5.0.10)(vue@3.4.0-rc.2)
-      '@vue/devtools-api': 6.5.1
-      '@vueuse/core': 10.7.0(vue@3.4.0-rc.2)
-      '@vueuse/integrations': 10.7.0(focus-trap@7.5.4)(vue@3.4.0-rc.2)
-      focus-trap: 7.5.4
-      mark.js: 8.11.1
-      minisearch: 6.3.0
-      mrmime: 2.0.0
-      postcss: 8.4.32
-      shikiji: 0.9.12
-      shikiji-transformers: 0.9.12
-      vite: 5.0.10
-      vue: 3.4.0-rc.2(typescript@5.3.3)
     transitivePeerDependencies:
       - '@algolia/client-search'
       - '@types/node'
@@ -2743,21 +2518,6 @@ packages:
       vue: 3.3.13(typescript@5.3.3)
     dev: false
 
-  /vue-demi@0.14.6(vue@3.4.0-rc.2):
-    resolution: {integrity: sha512-8QA7wrYSHKaYgUxDA5ZC24w+eHm3sYCbp0EzcDwKqN3p6HqtTCGR/GVsPyZW92unff4UlcSh++lmqDWN3ZIq4w==, tarball: https://registry.npmjs.org/vue-demi/-/vue-demi-0.14.6.tgz}
-    engines: {node: '>=12'}
-    hasBin: true
-    requiresBuild: true
-    peerDependencies:
-      '@vue/composition-api': ^1.0.0-rc.1
-      vue: ^3.0.0-0 || ^2.6.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
-    dependencies:
-      vue: 3.4.0-rc.2(typescript@5.3.3)
-    dev: false
-
   /vue@3.3.13(typescript@5.3.3):
     resolution: {integrity: sha512-LDnUpQvDgsfc0u/YgtAgTMXJlJQqjkxW1PVcOnJA5cshPleULDjHi7U45pl2VJYazSSvLH8UKcid/kzH8I0a0Q==, tarball: https://registry.npmjs.org/vue/-/vue-3.3.13.tgz}
     peerDependencies:
@@ -2771,22 +2531,6 @@ packages:
       '@vue/runtime-dom': 3.3.13
       '@vue/server-renderer': 3.3.13(vue@3.3.13)
       '@vue/shared': 3.3.13
-      typescript: 5.3.3
-    dev: false
-
-  /vue@3.4.0-rc.2(typescript@5.3.3):
-    resolution: {integrity: sha512-/HP5U5Da5+0oUc4mEzn8nxRpIvIHbfozIH0GFX0Dywmm35TrlD5B5/m4QRkuigbuR9ydtzB3D7wReGUiUoJADg==, tarball: https://registry.npmjs.org/vue/-/vue-3.4.0-rc.2.tgz}
-    peerDependencies:
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@vue/compiler-dom': 3.4.0-rc.2
-      '@vue/compiler-sfc': 3.4.0-rc.2
-      '@vue/runtime-dom': 3.4.0-rc.2
-      '@vue/server-renderer': 3.4.0-rc.2(vue@3.4.0-rc.2)
-      '@vue/shared': 3.4.0-rc.2
       typescript: 5.3.3
     dev: false
 
