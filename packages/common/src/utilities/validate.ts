@@ -1,4 +1,4 @@
-import { ContactData } from "./types/contact.ts";
+import { ContactData } from "../types/contact.ts";
 
 /**
  * Modified slightly from https://stackoverflow.com/questions/46155/how-can-i-validate-an-email-address-in-javascript

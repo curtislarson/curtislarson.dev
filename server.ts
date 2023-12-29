@@ -21,6 +21,9 @@ const kv = await QuackWareKv.init(Deno.env.get("QUACKWARE_KV_PATH"));
 
 const app = createApp(hostname, kv, email);
 
+app.get("/docs/assets/*", serveStatic({ root: "./docs/dist/" }));
+app.get("/docs/*", serveStatic({ path: "./docs/dist/docs/index.html" }));
+
 app.get("/assets/*", serveStatic({ root: "./dist/" }));
 app.get("/quack.png", serveStatic({ path: "./dist/quack.png" }));
 app.get("/resume.pdf", serveStatic({ path: "./dist/resume.pdf" }));

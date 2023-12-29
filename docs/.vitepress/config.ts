@@ -40,6 +40,7 @@ export default defineConfig({
   srcDir: "./src",
   srcExclude: ["./src/drafts/*"],
   base: "/docs/",
+  outDir: "./dist/docs",
   themeConfig: {
     nav: [
       { text: "Home", link: "/" },
