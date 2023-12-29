@@ -22,6 +22,9 @@ jobs:
       - name: Build
         run: npx pnpm run build
 
+      - name: Build Docs
+        run: npx pnpm run docs:build
+
       - name: Install deployctl
         run: deno install -Arf https://deno.land/x/deploy/deployctl.ts
 

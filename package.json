@@ -8,7 +8,10 @@
     "dev": "vite",
     "start": "vite",
     "build": "NODE_ENV=production vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "docs:build": "pnpm --filter=@curtis.land/docs run docs:build",
+    "docs:dev": "pnpm --filter=@curtis.land/docs run docs:dev",
+    "docs:preview": "pnpm --filter=@curtis.land/docs run docs:preview"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.7.0",
