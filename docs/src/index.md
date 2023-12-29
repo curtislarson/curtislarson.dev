@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "Curtis Larson's Guides and Documentation"
+  name: "Guides and Documentation"
   tagline: Useful guides and documentation for Software Development
   actions:
     - theme: brand
