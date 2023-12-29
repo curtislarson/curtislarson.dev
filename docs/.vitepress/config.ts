@@ -35,15 +35,15 @@ const sidebar: DefaultTheme.Sidebar = {
 };
 
 export default defineConfig({
-  title: "Docs",
-  description: "Guides and Documentation",
+  title: "Guides and Documentation",
+  description: "Useful guides and documentation for Software Development",
   srcDir: "./src",
   srcExclude: ["./src/drafts/*"],
   base: "/docs/",
   outDir: "./dist/docs",
   themeConfig: {
     nav: [
-      { text: "Home", link: "/" },
+      { text: "Home", link: "https://curtislarson.dev" },
       { text: "Guides", link: "/guides/" },
     ],
 
