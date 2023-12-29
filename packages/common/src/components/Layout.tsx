@@ -30,15 +30,14 @@ const NAVBAR_ITEMS: NavbarItemProps[] = [
   },
 ];
 
-export default function Layout() {
+export interface LayoutProps {
+  logo: string;
+}
+
+export default function Layout(props: LayoutProps) {
   return (
     <div>
-      <Navbar
-        logo={new URL("../public/quack.png", import.meta.url).pathname}
-        title="curtislarson.dev"
-        href="/"
-        items={NAVBAR_ITEMS}
-      />
+      <Navbar logo={props.logo} title="curtislarson.dev" href="/" items={NAVBAR_ITEMS} />
       <Outlet />
     </div>
   );
