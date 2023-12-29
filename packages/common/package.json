@@ -1,4 +1,12 @@
 {
   "name": "@curtis.land/common",
-  "main": "./index.ts"
+  "type": "module",
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
+  "dependencies": {
+    "preact": "10.19.3",
+    "react": "npm:@preact/compat@^17.1.2",
+    "react-dom": "npm:@preact/compat@^17.1.2",
+    "react-router-dom": "^6.21.1"
+  }
 }

@@ -2,6 +2,7 @@
   "name": "@curtis.land/www",
   "type": "module",
   "dependencies": {
+    "@curtis.land/common": "../common",
     "preact": "10.19.3",
     "react": "npm:@preact/compat@^17.1.2",
     "react-dom": "npm:@preact/compat@^17.1.2",

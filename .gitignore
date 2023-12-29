@@ -10,6 +10,7 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+dist-blog
 *.local
 
 # Editor directories and files
@@ -24,6 +25,8 @@ dist-ssr
 *.sw?
 
 public/stars.json
-blog/drafts
 
 /.env
+
+docs/.vitepress/dist
+docs/.vitepress/cache
