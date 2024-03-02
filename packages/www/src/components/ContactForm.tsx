@@ -112,7 +112,7 @@ export default class ContactForm extends Component<ContactFormProps, ContactForm
             value={this.state.subject}
             onInput={(e) => this.setState({ subject: (e.target as HTMLInputElement).value, errors: {} })}
           />
-          <ErrorLabel message={this.state.errors["email"]} />
+          <ErrorLabel message={this.state.errors["subject"]} />
         </div>
         <div class="form-control">
           <label class="label">
