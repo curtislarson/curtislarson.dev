@@ -14,11 +14,11 @@
     "docs:preview": "pnpm --filter=@curtis.land/docs run docs:preview"
   },
   "devDependencies": {
-    "@preact/preset-vite": "^2.7.0",
-    "autoprefixer": "^10.4.16",
-    "daisyui": "^4.4.23",
-    "postcss": "^8.4.32",
-    "prettier": "^3.1.1",
+    "@preact/preset-vite": "^2.9.0",
+    "autoprefixer": "^10.4.20",
+    "daisyui": "^4.12.10",
+    "postcss": "^8.4.41",
+    "prettier": "^3.3.3",
     "rimraf": "5.0.5",
     "tailwindcss": "3.4.0",
     "typescript": "5.3.3",
