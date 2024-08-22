@@ -22,9 +22,10 @@ export default function Hero() {
       <div class="items-center justify-center max-w-full gap-4 p-4 flex flex-col text-center">
         <h1 class="sm:text-7xl text-5xl font-bold">Curtis Larson</h1>
         <h2 class="text-lg sm:text-2xl mt-2 font-light">Full Stack Software Developer</h2>
+        <h3 class="text-sm sm:text-lg mt-2 font-light">Currently available for remote freelance / contract jobs.<br/>Please view my resume below and feel free to contact me with any questions.</h3>
         <div class="flex flex-row">
           <p class="text-primary py-2 px-2">
-            <a alt="Contact" class="btn btn-primary" onClick={onContactClicked}>
+            <a alt="Contact" class="btn btn-primary" href="mailto:curtismlarson@gmail.com">
               Contact
             </a>
           </p>
